@@ -119,7 +119,7 @@ function App() {
         residents={currentLocation?.residents ?? []}
         currentLocation={currentLocation}
       />
-      {/*{loaderConfi &&  <Loader />}*/}
+      {loaderConfi &&  <Loader />}
     </main>
   );
 }
