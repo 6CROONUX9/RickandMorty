@@ -3,7 +3,7 @@ export default {
   darkMode: "class",
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,html,tsx}",
   ],
   theme: {
     animation: {
@@ -28,6 +28,9 @@ export default {
       "fira-code":["Fira Code", "monospace"]
     }
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')
+    //require('tailwind-scrollbar-hide')
+  ],
 }
 

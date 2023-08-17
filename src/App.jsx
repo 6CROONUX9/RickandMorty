@@ -25,11 +25,11 @@ function App() {
     //setLocationName(e.target.value) //evita el error de vacio y no genera sugerencias
 
     const nwordWritten = e.target.value; //palabra escrita capturada en el input
-    console.log(nwordWritten);
+    
     const URL = `https://rickandmortyapi.com/api/location?name=${nwordWritten}`; //peticion a la url
     //console.log(nwordWritten);
     setLocationName(nwordWritten);
-    console.log(locationName + "este soy yo");
+    
     axios
       .get( URL )
       .then(({ data }) => setSuggestions(data.results)) //setSuggestions(data.results)
@@ -86,7 +86,7 @@ function App() {
   }, []);
 
   return (
-    <main className="font-fira-code bg-black min-h-screen text-white relative ">
+    <main className="font-fira-code bg-black min-h-screen text-white relative  ">
       <section className=" bg-[url('/bg_header.png')]  grid items-center justify-center bg-cover    ">
         <div className=" w-full relative mx-auto mb-8 flex justify-center items-center sm:-mt-36  ">
           <div className="absolute top-0 w-full     ">
