@@ -18,19 +18,22 @@ function App() {
   const [suggestions, setSuggestions] = useState([]); // capturar las igualdad del input
   const [locationName, setLocationName] = useState("");
 
+
+
   // encargadado de la lista con las sugerencias
   const handleChange = (e) => {
     //setLocationName(e.target.value) //evita el error de vacio y no genera sugerencias
 
     const nwordWritten = e.target.value; //palabra escrita capturada en el input
+    console.log(nwordWritten);
     const URL = `https://rickandmortyapi.com/api/location?name=${nwordWritten}`; //peticion a la url
     //console.log(nwordWritten);
     setLocationName(nwordWritten);
-
+    console.log(locationName + "este soy yo");
     axios
-      .get(URL)
+      .get( URL )
       .then(({ data }) => setSuggestions(data.results)) //setSuggestions(data.results)
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err)); //alert("colocar nombre valido")
   };
 
   // funcion que se encarga de recibir el evento del buscador
